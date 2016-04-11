@@ -1,5 +1,6 @@
 package com.example.mnmistake.movilrealty;
 
+import android.content.res.Resources;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 

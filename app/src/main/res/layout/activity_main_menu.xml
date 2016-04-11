@@ -11,13 +11,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.05"
-        android:weightSum="1.0">
+        android:weightSum="1.0"
+        android:background="@color/realtyBlack">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/IBlocator"
             android:gravity="center"
-            android:layout_weight="0.2" />
+            android:layout_weight="0.2"
+            android:contentDescription="Locate Yourself"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -26,7 +28,7 @@
             android:text="Properties"
             android:textColor="@color/black"
             android:gravity="center"
-            android:background="@drawable/rounded_corner" />
+            android:background="@drawable/rounded_corner"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -40,7 +42,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/IBsearch"
-            android:layout_weight="0.20"/>
+            android:contentDescription="Search"
+            android:layout_weight="0.20"
+        />
     </LinearLayout>
 
     <LinearLayout
@@ -51,7 +55,7 @@
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/IBrealtors"/>
+            android:id="@+id/IBrealtors" />
     </LinearLayout>
 
     <LinearLayout

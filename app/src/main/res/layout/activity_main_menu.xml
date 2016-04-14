@@ -3,28 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mnmistake.movilrealty.MainMenu"
-    android:weightSum="1.0"
+    tools:context="com.example.mnmistake.movilrealty.BaseDemoActivity"
     android:orientation="vertical">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.05"
-        android:weightSum="1.0"
-        android:background="@color/realtyBlack">
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:background="@color/realtyBlack"
+        android:padding="@dimen/realty_padding">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/IBlocator"
             android:gravity="center"
-            android:layout_weight="0.2"
+            android:layout_weight="0.15"
             android:contentDescription="Locate Yourself"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/TVproperties"
-            android:layout_weight="0.3"
+            android:layout_weight="0.25"
             android:text="Properties"
             android:textColor="@color/black"
             android:gravity="center"
@@ -33,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/TVrealtors"
-            android:layout_weight="0.3"
+            android:layout_weight="0.25"
             android:text="Realtors"
             android:textColor="@color/black"
             android:gravity="center"
@@ -43,27 +42,24 @@
             android:layout_height="match_parent"
             android:id="@+id/IBsearch"
             android:contentDescription="Search"
-            android:layout_weight="0.20"
+            android:layout_weight="0.15"
         />
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.9">
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/IBrealtors" />
+        android:layout_height="0dp"
+        android:layout_weight="0.84">
+        <include layout="@layout/properties_map"/>
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.05">
-        <include layout="@layout/mastermenu"
-        />
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:background ="@color/realtyOrange">
+        <include layout="@layout/mastermenu"/>
     </LinearLayout>
 </LinearLayout>

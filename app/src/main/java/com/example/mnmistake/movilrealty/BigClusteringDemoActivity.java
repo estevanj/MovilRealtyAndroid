@@ -5,14 +5,19 @@ import java.util.List;
 
 import org.json.JSONException;
 
+import android.content.Intent;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.maps.android.clustering.Cluster;
 import com.google.maps.android.clustering.ClusterManager;
 import com.example.mnmistake.movilrealty.model.MyItem;
 
-public class BigClusteringDemoActivity extends BaseDemoActivity {
+public class BigClusteringDemoActivity extends BaseDemoActivity implements ClusterManager.OnClusterClickListener<MyItem>,
+        ClusterManager.OnClusterInfoWindowClickListener<MyItem>,
+        ClusterManager.OnClusterItemClickListener<MyItem>,
+        ClusterManager.OnClusterItemInfoWindowClickListener<MyItem> {
     private ClusterManager<MyItem> mClusterManager;
 
     @Override
@@ -24,6 +29,8 @@ public class BigClusteringDemoActivity extends BaseDemoActivity {
         getMap().setOnCameraChangeListener(mClusterManager);
         try {
             readItems();
+            mClusterManager.getMarkerCollection().setOnInfoWindowAdapter(
+                    new InfoWindowsAdapter(getLayoutInflater()));
         } catch (JSONException e) {
             Toast.makeText(this, "Problem reading list of markers.", Toast.LENGTH_LONG).show();
         }
@@ -40,7 +47,29 @@ public class BigClusteringDemoActivity extends BaseDemoActivity {
                 double lng = position.longitude + offset;
                 MyItem offsetItem = new MyItem(lat, lng);
                 mClusterManager.addItem(offsetItem);
+                getMap().setInfoWindowAdapter(mClusterManager.getMarkerManager());
             }
         }
+    }
+
+    @Override
+    public boolean onClusterClick(Cluster<MyItem> cluster) {
+        return false;
+    }
+
+    @Override
+    public void onClusterInfoWindowClick(Cluster<MyItem> cluster) {
+
+    }
+
+    @Override
+    public boolean onClusterItemClick(MyItem myItem) {
+        return false;
+    }
+
+    @Override
+    public void onClusterItemInfoWindowClick(MyItem myItem) {
+
+
     }
 }

@@ -40,13 +40,13 @@
             android:name="PropertiesMap"
             android:label="@string/title_activity_properties_map" />
         <activity
-            android:name="SplashScreen"
-            android:theme="@android:style/Theme.Holo.NoActionBar">
+            android:name=".BigClusteringDemoActivity"
+            android:label="BigCluster">
         </activity>
-        <activity android:name="BigClusteringDemoActivity">
+
+        <activity android:name="SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

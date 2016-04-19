@@ -19,10 +19,19 @@ package com.example.mnmistake.movilrealty.model;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.maps.android.clustering.ClusterItem;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
 public class MyItem implements ClusterItem {
     private final LatLng mPosition;
+    private final int id;
+    private final String status;
 
-    public MyItem(double lat, double lng) {
+
+    public MyItem(double lat, double lng, int id, String status) {
+        this.id = id;
+        this.status = status;
         mPosition = new LatLng(lat, lng);
     }
 
@@ -30,4 +39,13 @@ public class MyItem implements ClusterItem {
     public LatLng getPosition() {
         return mPosition;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
 }

@@ -4,6 +4,7 @@ package com.example.mnmistake.movilrealty;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.mnmistake.movilrealty.model.MyItem;
 import com.google.android.gms.maps.GoogleMap;
@@ -11,10 +12,15 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
+import com.google.maps.android.clustering.Cluster;
 import com.google.maps.android.clustering.ClusterManager;
 
 
-public abstract class BaseDemoActivity extends FragmentActivity implements OnMapReadyCallback{
+public abstract class BaseDemoActivity extends FragmentActivity implements OnMapReadyCallback, ClusterManager.OnClusterClickListener<MyItem>,
+        ClusterManager.OnClusterInfoWindowClickListener<MyItem>,
+        ClusterManager.OnClusterItemClickListener<MyItem>,
+        ClusterManager.OnClusterItemInfoWindowClickListener<MyItem>{
+
     private GoogleMap mMap;
     private ClusterManager<MyItem> mClusterManager;
     private MyItem clickedClusterItem;
@@ -46,22 +52,9 @@ public abstract class BaseDemoActivity extends FragmentActivity implements OnMap
         }
         mMap = map;
         startDemo();
+
     }
 
-    private void setUpMapIfNeeded() {
-        // Do a null check to confirm that we have not already instantiated the map.
-        if (mMap == null) {
-            // Try to obtain the map from the SupportMapFragment.
-            mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
-                    .getMap();
-
-            // Check if we were successful in obtaining the map.
-            if (mMap != null) {
-                setUpMap();
-            }
-
-        }
-    }
 
     private void setUpMap() {
         ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMapAsync(this);
@@ -75,5 +68,32 @@ public abstract class BaseDemoActivity extends FragmentActivity implements OnMap
 
     protected GoogleMap getMap() {
         return mMap;
+    }
+
+
+    @Override
+    public boolean onClusterClick(Cluster<MyItem> cluster) {
+        Toast.makeText(this, "onClusterClick", Toast.LENGTH_LONG).show();
+        return false;
+    }
+
+    @Override
+    public void onClusterInfoWindowClick(Cluster<MyItem> cluster) {
+        Toast.makeText(this, "onClusterInfoWindowClick", Toast.LENGTH_LONG).show();
+
+    }
+
+    @Override
+    public boolean onClusterItemClick(MyItem myItem) {
+        int id= myItem.getId();
+        Toast.makeText(this,id,Toast.LENGTH_LONG).show();
+        return false;
+    }
+
+    @Override
+    public void onClusterItemInfoWindowClick(MyItem myItem) {
+
+        int id= myItem.getId();
+        Toast.makeText(this,"windows"+id,Toast.LENGTH_LONG).show();
     }
 }

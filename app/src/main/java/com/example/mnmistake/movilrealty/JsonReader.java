@@ -4,6 +4,8 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Parcelable;
+import android.util.Log;
 
 import com.example.mnmistake.movilrealty.model.MyItem;
 
@@ -12,9 +14,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.io.Serializable;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -22,9 +27,10 @@ import org.json.JSONObject;
 /**
  * Created by MnMistake on 4/10/2016.
  */
-public class JsonReader extends AsyncTask<String, Integer, String>{
+public class JsonReader extends AsyncTask<String, Integer, List<MyItem>>{
     private ProgressDialog dialog;
     private static Context mContext;
+    private List<MyItem> itemssend;
 
     JsonReader(Context mContext){
         this.mContext=mContext;
@@ -39,32 +45,41 @@ public class JsonReader extends AsyncTask<String, Integer, String>{
         return sb.toString();
     }
 
-    public static JSONArray readJsonFromUrl(String url) throws IOException, JSONException {
+    public static List readJsonFromUrl(String url) throws IOException, JSONException {
         InputStream is = new URL(url).openStream();
         try {
             BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
             String jsonText = rd.readLine();
             JSONArray json = new JSONArray(jsonText);
-           // JSONObject json = new JSONObject(jsonText);
-            return json;
+            List<MyItem> items = new ArrayList<MyItem>();
+            for (int i = 0; i < json.length(); i++) {
+                JSONObject object = json.getJSONObject(i);
+                int id = object.getInt("id");
+                double lat = object.getDouble("latitude");
+                double lng = object.getDouble("longitude");
+                String Status = object.getString("status");
+                items.add(new MyItem(lat, lng, id,Status));
+            }
+            return items;
+
+        //    return json;
         } finally {
             is.close();
         }
     }
 
     @Override
-    protected String doInBackground(String... URLS) {
-        JSONArray json = null;
-        List<MyItem> items;
+    protected List<MyItem> doInBackground(String... URLS) {
         try {
-            json = JsonReader.readJsonFromUrl(URLS[0]);
+            itemssend = new ArrayList<MyItem>();
+            itemssend = JsonReader.readJsonFromUrl(URLS[0]);
+
         } catch (IOException e) {
             e.printStackTrace();
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        System.out.println(json.toString());
-        return json.toString();
+        return itemssend;
     }
 
     @Override
@@ -84,12 +99,11 @@ public class JsonReader extends AsyncTask<String, Integer, String>{
     }
 
     @Override
-    protected void onPostExecute(String s) {
+    protected void onPostExecute(List<MyItem> s) {
         super.onPostExecute(s);
+        ObjectItem o= new ObjectItem(s);
         dialog.dismiss();
         Intent i = new Intent(mContext, BigClusteringDemoActivity.class);
-
         mContext.startActivity(i);
-
     }
 }

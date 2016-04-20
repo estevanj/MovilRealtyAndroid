@@ -4,4 +4,5 @@
     <color name="realtyBlack">#000</color>
     <color name="realtyOrange">#FC6725</color>
     <color name="bg_color">#ffffff</color>
+    <color name="white">#ffffff</color>
 </resources>

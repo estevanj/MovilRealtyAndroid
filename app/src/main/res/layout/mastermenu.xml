@@ -1,26 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <ImageButton
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+    <Button
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/IBproperties"
-        android:background="@drawable/icon_house"
+        android:drawableTop="@drawable/icon_house"
         android:adjustViewBounds="true"
-        android:layout_weight="1"/>
-    <ImageButton
+        android:layout_weight="1"
+        android:background ="@color/realtyOrange"
+        android:text="@string/properties"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:drawablePadding="@dimen/drawables_padding"/>
+    <Button
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/IBrealtors"
-        android:background="@drawable/icon_user"
+        android:drawableTop="@drawable/icon_user"
         android:adjustViewBounds="true"
-        android:layout_weight="1"/>
-    <ImageButton
+        android:layout_weight="1"
+        android:background ="@color/realtyOrange"
+        android:text="@string/realtors"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:drawablePadding="@dimen/drawables_padding"/>
+    <Button
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/IBfavorites"
-        android:background="@drawable/icon_user"
+        android:drawableTop="@drawable/icon_user"
         android:adjustViewBounds="true"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:background ="@color/realtyOrange"
+        android:text="@string/favorites"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:drawablePadding="@dimen/drawables_padding"/>
 </merge>
+

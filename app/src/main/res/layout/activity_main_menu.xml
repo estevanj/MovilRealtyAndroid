@@ -9,16 +9,18 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.07"
+        android:layout_weight="0.09"
         android:background="@color/realtyBlack"
-        android:padding="@dimen/realty_padding">
+        android:padding="8dp">
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/IBlocator"
             android:gravity="center"
             android:layout_weight="0.15"
-            android:contentDescription="Locate Yourself"/>
+            android:contentDescription="Locate Yourself"
+            android:background="@drawable/locator"
+            android:layout_marginRight="@dimen/margin_r_buttons"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -43,6 +45,7 @@
             android:id="@+id/IBsearch"
             android:contentDescription="Search"
             android:layout_weight="0.15"
+            android:icon ="@drawable/locator"
         />
     </LinearLayout>
 
@@ -50,16 +53,17 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.84">
+        android:layout_weight="0.8">
         <include layout="@layout/properties_map"/>
     </LinearLayout>
 
     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.07"
-        android:background ="@color/realtyOrange">
+        android:background ="@color/realtyOrange"
+        android:padding="2dp">
         <include layout="@layout/mastermenu"/>
     </LinearLayout>
 </LinearLayout>

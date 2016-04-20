@@ -5,7 +5,7 @@
     android:background="@color/bg_color">
 
     <TextView
-        android:id="@+id/tv_lat"
+        android:id="@+id/tv_adress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hola"
@@ -32,30 +32,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Text"
-                android:id="@+id/textView" />
+                android:id="@+id/tv_bd" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Text"
-                android:id="@+id/textView2" />
+                android:id="@+id/tv_Ba" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Text"
-                android:id="@+id/textView3" />
+                android:id="@+id/tv_Sqft" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Text"
-                android:id="@+id/textView4" />
+                android:id="@+id/tv_acres" />
         </LinearLayout>
     </LinearLayout>
 
     <TextView
-        android:id="@+id/tv_lng"
+        android:id="@+id/tv_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="mundo"

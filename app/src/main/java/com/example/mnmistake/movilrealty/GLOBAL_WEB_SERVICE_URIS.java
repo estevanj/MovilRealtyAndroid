@@ -5,4 +5,5 @@ package com.example.mnmistake.movilrealty;
  */
 public class GLOBAL_WEB_SERVICE_URIS {
     public static final String PROPERTIES_URL = "http://www.movilrealty.com/json/properties.php";
+    public static final String PROPERTIES_DETALLE_URL = "http://www.movilrealty.com/json/detalle_full.php?id=";
 }

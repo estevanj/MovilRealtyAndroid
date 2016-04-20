@@ -35,9 +35,9 @@ public class InfoWindowsAdapter implements GoogleMap.InfoWindowAdapter {
         // Getting the position from the marker
         LatLng latLng = marker.getPosition();
         // Getting reference to the TextView to set latitude
-        TextView tvLat = (TextView) v.findViewById(R.id.tv_lat);
+        TextView tvLat = (TextView) v.findViewById(R.id.tv_acres);
         // Getting reference to the TextView to set longitude
-        TextView tvLng = (TextView) v.findViewById(R.id.tv_lng);
+        TextView tvLng = (TextView) v.findViewById(R.id.tv_price);
         // Setting the latitude
         tvLat.setText("id:" +clickedClusterItem.getId());
         // Setting the longitude

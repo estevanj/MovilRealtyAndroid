@@ -19,7 +19,7 @@ import com.google.maps.android.clustering.ClusterManager;
 public abstract class BaseDemoActivity extends FragmentActivity implements OnMapReadyCallback, ClusterManager.OnClusterClickListener<MyItem>,
         ClusterManager.OnClusterInfoWindowClickListener<MyItem>,
         ClusterManager.OnClusterItemClickListener<MyItem>,
-        ClusterManager.OnClusterItemInfoWindowClickListener<MyItem>{
+        ClusterManager.OnClusterItemInfoWindowClickListener<MyItem>,GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;
     private ClusterManager<MyItem> mClusterManager;
@@ -74,6 +74,7 @@ public abstract class BaseDemoActivity extends FragmentActivity implements OnMap
     @Override
     public boolean onClusterClick(Cluster<MyItem> cluster) {
         Toast.makeText(this, "onClusterClick", Toast.LENGTH_LONG).show();
+
         return false;
     }
 
@@ -96,4 +97,14 @@ public abstract class BaseDemoActivity extends FragmentActivity implements OnMap
         int id= myItem.getId();
         Toast.makeText(this,"windows"+id,Toast.LENGTH_LONG).show();
     }
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+        Toast.makeText(this,"marker tocado",Toast.LENGTH_LONG).show();
+
+        return false;
+    }
+
+
+
 }

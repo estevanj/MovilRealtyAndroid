@@ -30,6 +30,8 @@ import java.util.List;
 public class JsonReaderbyId extends AsyncTask<String, Integer, List<Properties_full>>{
     private static int id;
     private List<Properties_full> itemssend;
+    private List<String> p;
+
 
     JsonReaderbyId(int id){
         this.id=id;
@@ -41,14 +43,12 @@ public class JsonReaderbyId extends AsyncTask<String, Integer, List<Properties_f
         try {
             BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
             String jsonText = rd.readLine();
-
+            ////Detalle
             JSONObject jsonObj = new JSONObject(jsonText);
             JSONArray json = jsonObj.getJSONArray("info");
-
             List<Properties_full> items = new ArrayList<Properties_full>();
             for (int i = 0; i < json.length(); i++) {
                 JSONObject object = json.getJSONObject(i);
-
                 String Adress=object.getString("L_Address");
                 Double Price=object.getDouble("L_AskingPrice");
                 int Bed=object.getInt("LM_Int1_1");
@@ -59,8 +59,30 @@ public class JsonReaderbyId extends AsyncTask<String, Integer, List<Properties_f
             }
 
             return items;
-
         //    return json;
+        } finally {
+            is.close();
+        }
+    }
+
+    public static List readJsonphotos(String url) throws IOException, JSONException {
+        InputStream is = new URL(url+id).openStream();
+        try {
+            BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
+            String jsonText = rd.readLine();
+            ////Detalle
+            JSONObject jsonObj = new JSONObject(jsonText);
+            ///Imagenes
+            JSONArray jsonphotos = jsonObj.getJSONArray("images");
+            List<String> photos = new ArrayList<String>();
+
+            for(int j=0;j<jsonphotos.length();j++){
+                JSONObject objectphotos = jsonphotos.getJSONObject(j);
+                String path=objectphotos.getString("path");
+                photos.add(j,path);
+            }
+            return photos;
+            //    return json;
         } finally {
             is.close();
         }
@@ -70,7 +92,9 @@ public class JsonReaderbyId extends AsyncTask<String, Integer, List<Properties_f
     protected List<Properties_full> doInBackground(String... URLS) {
         try {
             itemssend = new ArrayList<Properties_full>();
+            p= new ArrayList<String>();
             itemssend = JsonReaderbyId.readJsonFromUrl(URLS[0]);
+            p= JsonReaderbyId.readJsonFromUrl(URLS[0]);
 
 
         } catch (IOException e) {
@@ -84,7 +108,8 @@ public class JsonReaderbyId extends AsyncTask<String, Integer, List<Properties_f
     @Override
     protected void onPostExecute(List<Properties_full> s) {
         super.onPostExecute(s);
-        ObjectItemFull o=new ObjectItemFull(s);
+        ObjectItemFull o=new ObjectItemFull(s,p);
         Log.d("items", o.toString());
+        Log.d("fotos",p.toString());
     }
 }

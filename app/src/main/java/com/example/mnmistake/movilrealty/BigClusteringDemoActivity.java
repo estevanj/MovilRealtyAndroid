@@ -1,13 +1,16 @@
 package com.example.mnmistake.movilrealty;
 
 import java.io.InputStream;
+import java.util.Iterator;
 import java.util.List;
 
 import org.json.JSONException;
 
+import android.graphics.drawable.BitmapDrawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,12 +22,14 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.maps.android.clustering.Cluster;
 import com.google.maps.android.clustering.ClusterManager;
 import com.example.mnmistake.movilrealty.model.MyItem;
+import com.squareup.picasso.Picasso;
 
 public class BigClusteringDemoActivity extends BaseDemoActivity{
     private String PROPERTIES_URL = GLOBAL_WEB_SERVICE_URIS.PROPERTIES_DETALLE_URL;
     private ClusterManager<MyItem> mClusterManager;
     static MyItem clickedClusterItem;
     private List<Properties_full> items;
+    private List<String> photos;
 
 
     @Override
@@ -44,6 +49,9 @@ public class BigClusteringDemoActivity extends BaseDemoActivity{
                 clickedClusterItem = item;
                 new JsonReaderbyId(clickedClusterItem.getId()).execute(PROPERTIES_URL);
                 items= ObjectItemFull.getItems();
+                Log.d("items1",items.toString());
+                photos=ObjectItemFull.getItemsphotos();
+                Log.d("fotos1",photos.toString());
                 return false;
             }
         });
@@ -92,7 +100,7 @@ public class BigClusteringDemoActivity extends BaseDemoActivity{
 
         @Override
         public View getInfoContents(Marker marker) {
-            Log.d("compro",items.toString());
+
             View v = inflater.inflate(R.layout.info_window, null);
 
             String ad="";
@@ -101,6 +109,7 @@ public class BigClusteringDemoActivity extends BaseDemoActivity{
             String bat="";
             String sqftt="";
             String ac="";
+            String path="";
 
             TextView addres = (TextView) v.findViewById(R.id.tv_adress);
             TextView price = (TextView) v.findViewById(R.id.tv_price);
@@ -108,7 +117,7 @@ public class BigClusteringDemoActivity extends BaseDemoActivity{
             TextView ba = (TextView) v.findViewById(R.id.tv_Ba);
             TextView sqft = (TextView) v.findViewById(R.id.tv_Sqft);
             TextView acres = (TextView) v.findViewById(R.id.tv_acres);
-
+            ImageView photo= (ImageView) v.findViewById(R.id.Iv_photos);
               for (Properties_full item : items) {
                 ad= item.getAdress();
                 pr="$ "+item.getPrice().toString();
@@ -117,6 +126,15 @@ public class BigClusteringDemoActivity extends BaseDemoActivity{
                 sqftt=item.getSqFt()+" Sq Ft";
                 ac=item.getAcres()+ " Acres";
             }
+
+            Iterator iter = photos.iterator();
+            while (iter.hasNext()){
+                System.out.println(iter.next());
+                Log.d("pictures",iter.toString() );
+            }
+            //////Picaso for photos
+            Picasso.with(v.getContext()).load("http://rets.idxblue.com//idxblue//tmls2//data//photos//1600610_4.jpg").placeholder(R.mipmap.ic_launcher).error(R.drawable.abc_btn_check_material).into(photo);
+
 
             addres.setText(ad);
             price.setText(pr);

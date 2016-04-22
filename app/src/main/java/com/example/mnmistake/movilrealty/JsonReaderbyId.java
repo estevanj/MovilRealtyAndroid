@@ -30,8 +30,8 @@ import java.util.List;
 public class JsonReaderbyId extends AsyncTask<String, Integer, List<Properties_full>>{
     private static int id;
     private List<Properties_full> itemssend;
-    private List<String> p;
-
+    private ArrayList<String> p;
+    private String foto;
 
     JsonReaderbyId(int id){
         this.id=id;
@@ -65,7 +65,7 @@ public class JsonReaderbyId extends AsyncTask<String, Integer, List<Properties_f
         }
     }
 
-    public static List readJsonphotos(String url) throws IOException, JSONException {
+    public static ArrayList readJsonphotos(String url) throws IOException, JSONException {
         InputStream is = new URL(url+id).openStream();
         try {
             BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
@@ -74,7 +74,7 @@ public class JsonReaderbyId extends AsyncTask<String, Integer, List<Properties_f
             JSONObject jsonObj = new JSONObject(jsonText);
             ///Imagenes
             JSONArray jsonphotos = jsonObj.getJSONArray("images");
-            List<String> photos = new ArrayList<String>();
+            ArrayList<String> photos = new ArrayList<String>();
 
             for(int j=0;j<jsonphotos.length();j++){
                 JSONObject objectphotos = jsonphotos.getJSONObject(j);
@@ -94,7 +94,7 @@ public class JsonReaderbyId extends AsyncTask<String, Integer, List<Properties_f
             itemssend = new ArrayList<Properties_full>();
             p= new ArrayList<String>();
             itemssend = JsonReaderbyId.readJsonFromUrl(URLS[0]);
-            p= JsonReaderbyId.readJsonFromUrl(URLS[0]);
+            p= JsonReaderbyId.readJsonphotos(URLS[0]);
 
 
         } catch (IOException e) {
@@ -108,8 +108,9 @@ public class JsonReaderbyId extends AsyncTask<String, Integer, List<Properties_f
     @Override
     protected void onPostExecute(List<Properties_full> s) {
         super.onPostExecute(s);
-        ObjectItemFull o=new ObjectItemFull(s,p);
-        Log.d("items", o.toString());
-        Log.d("fotos",p.toString());
+        foto=p.get(0);
+        ObjectItemFull o=new ObjectItemFull(s,p,foto);
+        Log.d("afaf", foto);
+       // Log.d("fotos",p.toString());
     }
 }

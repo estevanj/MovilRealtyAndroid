@@ -1,6 +1,7 @@
 package com.example.mnmistake.movilrealty;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -29,8 +30,8 @@ public class BigClusteringDemoActivity extends BaseDemoActivity{
     private ClusterManager<MyItem> mClusterManager;
     static MyItem clickedClusterItem;
     private List<Properties_full> items;
-    private List<String> photos;
-
+    private ArrayList<String> photos;
+    private String foto;
 
     @Override
     protected void startDemo() {
@@ -51,7 +52,8 @@ public class BigClusteringDemoActivity extends BaseDemoActivity{
                 items= ObjectItemFull.getItems();
                 Log.d("items1",items.toString());
                 photos=ObjectItemFull.getItemsphotos();
-                Log.d("fotos1",photos.toString());
+                Log.d("fotos1", photos.toString());
+                foto=ObjectItemFull.getFoto();
                 return false;
             }
         });
@@ -109,7 +111,9 @@ public class BigClusteringDemoActivity extends BaseDemoActivity{
             String bat="";
             String sqftt="";
             String ac="";
-            String path="";
+            String path="http:\\/\\/rets.idxblue.com\\/idxblue\\/tmls2\\/data\\/photos\\/1600610_1.jpg";
+            String cambio;
+            cambio=path.replace("\\","");
 
             TextView addres = (TextView) v.findViewById(R.id.tv_adress);
             TextView price = (TextView) v.findViewById(R.id.tv_price);
@@ -127,15 +131,8 @@ public class BigClusteringDemoActivity extends BaseDemoActivity{
                 ac=item.getAcres()+ " Acres";
             }
 
-            Iterator iter = photos.iterator();
-            while (iter.hasNext()){
-                System.out.println(iter.next());
-                Log.d("pictures",iter.toString() );
-            }
-            //////Picaso for photos
-            Picasso.with(v.getContext()).load("http://rets.idxblue.com//idxblue//tmls2//data//photos//1600610_4.jpg").placeholder(R.mipmap.ic_launcher).error(R.drawable.abc_btn_check_material).into(photo);
-
-
+            //////Picasso for photos
+            Picasso.with(v.getContext()).load(foto).placeholder(R.mipmap.ic_launcher).error(R.drawable.abc_btn_check_material).into(photo);
             addres.setText(ad);
             price.setText(pr);
             bd.setText(bad);

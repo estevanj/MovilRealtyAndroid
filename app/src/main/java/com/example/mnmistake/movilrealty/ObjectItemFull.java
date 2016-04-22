@@ -11,18 +11,24 @@ import java.util.List;
  */
 public class ObjectItemFull {
     static List<Properties_full> items = new ArrayList<Properties_full>();
-    private static List<String> itemsphotos= new ArrayList<String>();
+    static ArrayList<String> itemsphotos= new ArrayList<String>();
+    static String foto;
 
-    public ObjectItemFull(List<Properties_full> items, List<String> itemsphotos) {
+    public ObjectItemFull(List<Properties_full> items, ArrayList<String> itemsphotos,String foto) {
         this.items = items;
         this.itemsphotos=itemsphotos;
+        this.foto=foto;
+    }
+
+    public static String getFoto() {
+        return foto;
     }
 
     public static List<Properties_full> getItems() {
         return items;
     }
 
-    public static List<String> getItemsphotos() {
+    public static ArrayList<String> getItemsphotos() {
         return itemsphotos;
     }
 

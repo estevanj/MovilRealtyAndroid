@@ -1,9 +1,11 @@
 package com.example.mnmistake.movilrealty;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import org.json.JSONException;
 
@@ -48,21 +50,33 @@ public class BigClusteringDemoActivity extends BaseDemoActivity{
             @Override
             public boolean onClusterItemClick(MyItem item) {
                 clickedClusterItem = item;
-                new JsonReaderbyId(clickedClusterItem.getId()).execute(PROPERTIES_URL);
-                items= ObjectItemFull.getItems();
-                Log.d("items1",items.toString());
-                photos=ObjectItemFull.getItemsphotos();
-                Log.d("fotos1", photos.toString());
-                foto=ObjectItemFull.getFoto();
+                Log.d("clouster", item.toString());
+
+                try {
+                    items = new JsonReaderbyId(clickedClusterItem.getId()).execute(PROPERTIES_URL).get();
+                      Log.d("items1",items.toString());
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                }
+
+             //   items = ObjectItemFull.getItems();
+
+                //  Log.d("fotos1", photos.toString());
+                foto = ObjectItemFull.getFoto();
+
+
+              //  getMap().setInfoWindowAdapter(new InfoWindowsAdapter(getLayoutInflater(),items,foto,clickedClusterItem));
+                mClusterManager.getMarkerCollection().setOnInfoWindowAdapter(
+                        new InfoWindowsAdapter(getLayoutInflater(),items,foto,clickedClusterItem));
                 return false;
             }
         });
 
         try {
             readItems();
-            mClusterManager.getMarkerCollection().setOnInfoWindowAdapter(
-                    new InfoWindowsAdapter(
-                            getLayoutInflater()));
+
         } catch (JSONException e) {
             Toast.makeText(this, "Problem reading list of markers.", Toast.LENGTH_LONG).show();
         }
@@ -88,60 +102,6 @@ public class BigClusteringDemoActivity extends BaseDemoActivity{
     }
 
 
-    public class InfoWindowsAdapter implements GoogleMap.InfoWindowAdapter {
 
-        LayoutInflater inflater=null;
-        InfoWindowsAdapter(LayoutInflater layoutInflate) {
-            this.inflater=layoutInflate;
-        }
-
-        @Override
-        public View getInfoWindow(Marker marker) {
-            return null;
-        }
-
-        @Override
-        public View getInfoContents(Marker marker) {
-
-            View v = inflater.inflate(R.layout.info_window, null);
-
-            String ad="";
-            String pr="";
-            String bad="";
-            String bat="";
-            String sqftt="";
-            String ac="";
-            String path="http:\\/\\/rets.idxblue.com\\/idxblue\\/tmls2\\/data\\/photos\\/1600610_1.jpg";
-            String cambio;
-            cambio=path.replace("\\","");
-
-            TextView addres = (TextView) v.findViewById(R.id.tv_adress);
-            TextView price = (TextView) v.findViewById(R.id.tv_price);
-            TextView bd = (TextView) v.findViewById(R.id.tv_bd);
-            TextView ba = (TextView) v.findViewById(R.id.tv_Ba);
-            TextView sqft = (TextView) v.findViewById(R.id.tv_Sqft);
-            TextView acres = (TextView) v.findViewById(R.id.tv_acres);
-            ImageView photo= (ImageView) v.findViewById(R.id.Iv_photos);
-              for (Properties_full item : items) {
-                ad= item.getAdress();
-                pr="$ "+item.getPrice().toString();
-                bad=item.getBed()+" Bd";
-                bat=item.getBath()+" Ba" ;
-                sqftt=item.getSqFt()+" Sq Ft";
-                ac=item.getAcres()+ " Acres";
-            }
-
-            //////Picasso for photos
-            Picasso.with(v.getContext()).load(foto).placeholder(R.mipmap.ic_launcher).error(R.drawable.abc_btn_check_material).into(photo);
-            addres.setText(ad);
-            price.setText(pr);
-            bd.setText(bad);
-            ba.setText(bat);
-            sqft.setText(sqftt);
-            acres.setText(ac);
-
-            return v;
-        }
-    }
 
 }

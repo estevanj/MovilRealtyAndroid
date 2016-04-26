@@ -27,7 +27,7 @@ import java.util.List;
  * Created by MnMistake on 4/10/2016.
  */
 
-public class JsonReaderbyId extends AsyncTask<String, Integer, List<Properties_full>>{
+public class JsonReaderbyId extends AsyncTask<String, Integer,  List<Properties_full>>{
     private static int id;
     private List<Properties_full> itemssend;
     private ArrayList<String> p;
@@ -89,18 +89,20 @@ public class JsonReaderbyId extends AsyncTask<String, Integer, List<Properties_f
     }
 
     @Override
-    protected List<Properties_full> doInBackground(String... URLS) {
+    protected  List<Properties_full> doInBackground(String... URLS) {
+        Boolean res=false;
         try {
             itemssend = new ArrayList<Properties_full>();
             p= new ArrayList<String>();
-            itemssend = JsonReaderbyId.readJsonFromUrl(URLS[0]);
             p= JsonReaderbyId.readJsonphotos(URLS[0]);
-
+            itemssend = JsonReaderbyId.readJsonFromUrl(URLS[0]);
+            res=true;
 
         } catch (IOException e) {
             e.printStackTrace();
         } catch (JSONException e) {
             e.printStackTrace();
+
         }
         return itemssend;
     }
@@ -109,7 +111,7 @@ public class JsonReaderbyId extends AsyncTask<String, Integer, List<Properties_f
     protected void onPostExecute(List<Properties_full> s) {
         super.onPostExecute(s);
         foto=p.get(0);
-        ObjectItemFull o=new ObjectItemFull(s,p,foto);
+        new ObjectItemFull(itemssend,p,foto);
         Log.d("afaf", foto);
        // Log.d("fotos",p.toString());
     }

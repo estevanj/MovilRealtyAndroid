@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\daej85432\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\picasso-2.5.2_1473fed41a69c2318b2021f00d1db45885f484d6.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b82b8e847173c28efffcd291b2a0b1ae9ad17fa4">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-identity-8.4.0_86afe47eed5f7064bbf88a49bb56bfacff824a05.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1a78298e7724d5440d210bcb946b3493250d354d">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-plus-8.4.0_dafc3d2f39fee6a27ec9d71d6ada108b555b453a.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="08d34b2d135c1cc96ab506fd8bf6916d1e2f391a">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-panorama-8.4.0_4a4c19d6f6c0c576f98277f646c1b2af18c59e0b.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b36f30ac5ee5d5214f4b1e2ac49f11889d58e71a">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-drive-8.4.0_7da56024b4a6ba9efad24d720affbe18b83ad54b.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-8.4.0_30dfb05a60c15e38c849bd56f8c7412fec3b122b.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gcm-8.4.0_3e36516218f254ba24dc1ddb3574b7b211f87e4e.jar" />
+    </item>
+    <item
+        jar="C:\Users\daej85432\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\support-annotations-23.3.0_8dc158bafd7203953a9f1d69601d9cfce6d55ee5.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-8.4.0_a045e6a8c9a1314e9873286428b4148b647ccd84.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-measurement-8.4.0_093f291d376b26569079d06c830d5e5d3529a552.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.3.0_db7cbc2697a9d9a59be396648b5cf23879e7adda.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.3.0_39d2a662fd949111a76104e224f44db54328d2ca.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.android.support-mediarouter-v7-23.0.0_95b58c249dc3c35a973bbda6ec9af69ad124813b.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c54246475c1bb64ac6857d1320364bfbfeda2c46">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-fitness-8.4.0_f5caa20834d28de81c15c52987a260930bab5ec5.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-location-8.4.0_727b01ac1741bc64ec4790fbf9418cf2c361b1c8.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="dfecc4d835cdabcdecf7e95f0d20a3ef1e9d8ef4">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-vision-8.4.0_b204e78c7d8fdfb5e87c8db55fb36878e04b81b2.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b5e7892fb0708e792e0e933c4c0a0ca0ac7831fb">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-ads-8.4.0_ed8764106b182178a83895ffb1f4b8440d5186c3.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="9cad249cf62751a323d9af568caf12284b7d6062">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-nearby-8.4.0_b33cf0d75f1985b82efb1185a09a511848ed7bd5.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.android.support\design\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.3.0_218a878716ecb79328c4723017f0158061d6669c.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.4.0_d963de2d1ac0f3b31404510d5fc4e35ad1fe6893.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0_d8466e8343d4bfb94a43bc253275d943cf0a7d0f.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="4b1a7fac58cc85b115adee653a10b6300f90951a">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.maps.android-android-maps-utils-0.4_7c4678280d547481f66d0483c4d7cbf2af1776bc.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-analytics-8.4.0_4784f080bc1cd16bce1043478c099c678fe992ce.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.3.0_11e6a4bd534ba270242c9e9c72a7bcf65174b971.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="551e78f21acf69ebfb489c0e79647824c838013e">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-cast-8.4.0_c6743145b8592f870b600fc02e9cfa8a73bfb77a.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="9fe026fb4c7fce21bc5142f6e1bdf844f28061ac">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appinvite-8.4.0_008c214f9fdef7601b09ae936e509dba3123949c.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="966e5771a5a2ebfb31bf00d7cd6cd2546d245517">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-8.4.0_2f582abf516025bd0723214caec2bce42d512d86.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-8.4.0_53d02ea05a10babac874dfba4fc2fe0c0aef6b57.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="f2df436a8f02ce7e4d7d209671fc45f97c470f0e">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wallet-8.4.0_d9f4730b2c6faae522d4b958dd1903121895e49d.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\internal_impl-23.3.0_ad931351c476185f5e219768f03578c4c9ce88ad.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.3.0_ed6aee80550278db3314fc787795b0d8d64fad3f.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e167a34eaca0b31704212f43f9576ea84e05046f">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wearable-8.4.0_244465f87089442ca6b66a0c93a8ddfe7f7b8244.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.3.0_bf5f7e4cd1e121d64db66ab5c277df7d5e45cbac.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="0194a7409c40de94fb539d4ad9928ec5d47afeb7">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-safetynet-8.4.0_3488dc01803b8cc6fd0f261e0ff9c06dde09eca8.jar" />
+    </item>
+    <item
+        jar="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3a364cc6b698d1b3b2d284f64618daaa7fe77ddf">
+        <dex dex="C:\Estevan\APPAndroid\movilrealtyandroid\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-games-8.4.0_1c3541d9768e5c642677ec998d5060346523d21d.jar" />
+    </item>
+
+</items>

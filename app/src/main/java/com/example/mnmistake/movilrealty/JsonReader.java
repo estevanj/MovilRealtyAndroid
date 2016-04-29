@@ -32,6 +32,7 @@ public class JsonReader extends AsyncTask<String, Integer, List<MyItem>>{
     private static Context mContext;
     private List<MyItem> itemssend;
 
+
     JsonReader(Context mContext){
         this.mContext=mContext;
 
@@ -101,6 +102,7 @@ public class JsonReader extends AsyncTask<String, Integer, List<MyItem>>{
     @Override
     protected void onPostExecute(List<MyItem> s) {
         super.onPostExecute(s);
+        //creacion objeto
         ObjectItem o= new ObjectItem(s);
         dialog.dismiss();
         Intent i = new Intent(mContext, BigClusteringDemoActivity.class);

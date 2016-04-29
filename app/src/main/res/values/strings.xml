@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">MovilrEalty</string>
     <string name="title_activity_properties_map">MapaPropiedades</string>
+    <string name="title_activity_base_demo">BaseDemoActivity</string>
+    <string name="properties">Properties</string>
+    <string name="realtors">Realtors</string>
+    <string name="favorites">Favorites</string>
+    <string name="contact">Contact Us</string>
 </resources>

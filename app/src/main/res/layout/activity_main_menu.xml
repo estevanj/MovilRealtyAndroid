@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mnmistake.movilrealty.BaseDemoActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.09"
+        android:background="@color/realtyBlack"
+        android:padding="8dp">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/IBlocator"
+            android:gravity="center"
+            android:layout_weight="0.15"
+            android:contentDescription="Locate Yourself"
+            android:background="@drawable/locator"
+            android:layout_marginRight="@dimen/margin_r_buttons"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/TVproperties"
+            android:layout_weight="0.25"
+            android:text="Properties"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:background="@drawable/rounded_corner"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/TVrealtors"
+            android:layout_weight="0.25"
+            android:text="Realtors"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:background="@drawable/rounded_corner"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/IBsearch"
+            android:contentDescription="Search"
+            android:layout_weight="0.15"
+            android:icon ="@drawable/locator"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
+        <include layout="@layout/properties_map"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:background ="@color/realtyOrange"
+        android:padding="2dp">
+        <include layout="@layout/mastermenu"/>
+    </LinearLayout>
+</LinearLayout>

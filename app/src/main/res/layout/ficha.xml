@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/masterTopMenuBack">
+    <include layout="@layout/master_top_menu"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:id="@+id/photoDetail"
+        android:contentDescription="@string/accept">
+    </ImageView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/contactUsDetail"
+        android:text="@string/contact">
+    </Button>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/titleDescription"
+        android:text="Titulo Aqui"
+        android:padding="@dimen/realty_padding">
+    </TextView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/masterTopMenuBack"
+        android:padding="@dimen/realty_padding">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/id"
+            android:text="id">
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idval"
+            android:text="numerod e id">
+        </TextView>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:id="@+id/descripcion"
+        android:padding="@dimen/realty_padding"
+        android:text="asdnasdnasjkdnakjsdnajksdnaksdnasdnkasdnkajsndkaksdnkjasdjkasndjksankdasndkjansdkasdasdasdad">
+    </TextView>
+
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000</color>
+    <color name="realtyBlack">#000</color>
+    <color name="realtyOrange">#FC6725</color>
+    <color name="masterTopMenuBack">#161922</color>
+    <color name="bg_color">#ffffff</color>
+    <color name="white">#ffffff</color>
+</resources>

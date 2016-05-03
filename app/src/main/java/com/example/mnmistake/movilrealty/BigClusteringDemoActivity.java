@@ -38,8 +38,8 @@ public class BigClusteringDemoActivity extends BaseDemoActivity{
     @Override
     protected void startDemo() {
 
-         getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(35.7595731, -79.01929969999998), 5));
-         mClusterManager = new ClusterManager<MyItem>(this, getMap());
+        getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(35.7595731, -79.01929969999998), 5));
+        mClusterManager = new ClusterManager<MyItem>(this, getMap());
         getMap().setOnCameraChangeListener(mClusterManager);
         getMap().setOnMarkerClickListener(mClusterManager);
         getMap().setInfoWindowAdapter(mClusterManager.getMarkerManager());
@@ -54,6 +54,7 @@ public class BigClusteringDemoActivity extends BaseDemoActivity{
 
                 try {
                     items = new JsonReaderbyId(clickedClusterItem.getId()).execute(PROPERTIES_URL).get();
+                    setPropertyData(items);
                       Log.d("items1",items.toString());
                 } catch (InterruptedException e) {
                     e.printStackTrace();

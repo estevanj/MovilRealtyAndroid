@@ -1,9 +1,11 @@
 package com.example.mnmistake.movilrealty.model;
 
+import java.io.Serializable;
+
 /**
  * Created by daej85432 on 20/04/2016.
  */
-public class Properties_full  {
+public class Properties_full implements Serializable {
     private final String Adress;
     private final Double Price;
     private final int Bed;

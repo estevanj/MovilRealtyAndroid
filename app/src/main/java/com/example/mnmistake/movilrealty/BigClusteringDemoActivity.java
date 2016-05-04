@@ -1,31 +1,15 @@
 package com.example.mnmistake.movilrealty;
-
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
-
 import org.json.JSONException;
-
-import android.graphics.drawable.BitmapDrawable;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.mnmistake.movilrealty.model.Properties_full;
 import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
-import com.google.maps.android.clustering.Cluster;
 import com.google.maps.android.clustering.ClusterManager;
 import com.example.mnmistake.movilrealty.model.MyItem;
-import com.squareup.picasso.Picasso;
 
 public class BigClusteringDemoActivity extends BaseDemoActivity{
     private String PROPERTIES_URL = GLOBAL_WEB_SERVICE_URIS.PROPERTIES_DETALLE_URL;
@@ -66,7 +50,7 @@ public class BigClusteringDemoActivity extends BaseDemoActivity{
 
                 //  Log.d("fotos1", photos.toString());
                 foto = ObjectItemFull.getFoto();
-
+                setPicture(foto);
 
               //  getMap().setInfoWindowAdapter(new InfoWindowsAdapter(getLayoutInflater(),items,foto,clickedClusterItem));
                 mClusterManager.getMarkerCollection().setOnInfoWindowAdapter(

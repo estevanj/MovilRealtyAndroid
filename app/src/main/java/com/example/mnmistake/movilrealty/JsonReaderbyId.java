@@ -1,12 +1,8 @@
 package com.example.mnmistake.movilrealty;
 
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.example.mnmistake.movilrealty.model.MyItem;
 import com.example.mnmistake.movilrealty.model.Properties_full;
 
 import org.json.JSONArray;
@@ -17,7 +13,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.Reader;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
@@ -55,7 +50,13 @@ public class JsonReaderbyId extends AsyncTask<String, Integer,  List<Properties_
                 int Bath=object.getInt("LM_Int1_2");
                 int sqFt=object.getInt("LM_Int2_5");
                 String acres=object.getString("LM_Char10_21");
-                items.add(new Properties_full(Adress,Price ,Bed ,Bath,sqFt,acres));
+                items.add(new Properties_full(Adress,Price ,Bed ,Bath,sqFt,acres, id, location, type, year, elementary, middle,
+                        high, i_status, i_category, i_proportytype, i_subdivision, i_totalLivingArea, i_bedrooms, i_fullBathroom, i_halfBathrooms,
+                        i_garage, i_newConst, i_aproxAcres, i_lotNumber, i_yearBuilt, i_directions, s_totalLivingArea, s_aboveGrade, d_kitchen, d_garage,
+                        d_livingRoom, d_familyRoom, d_patio, d_masterBedroom, d_bedroom2, d_bedroom3, d_bedroom4, d_bedroom5, h_fees1, h_fees2, h_free1, h_free2,
+                        h_mgmt, h_feesmoney, f_ac, f_acres, f_basement, f_design, f_dining, f_equipment, f_exterior, f_fireplace, f_flooring, f_foundation, f_fuel,
+                        f_heating, f_interior, f_lotDescription, f_parking, f_roof, f_style, f_washer, f_waterheater, f_watersewer, a_listAgen, a_nameAgent, a_agentPhone,
+                        a_officeName));
             }
 
             return items;

@@ -42,6 +42,7 @@ public abstract class BaseDemoActivity extends FragmentActivity implements OnMap
     private ClusterManager<MyItem> mClusterManager;
     private MyItem clickedClusterItem;
     private List<Properties_full> propertyData;
+    private String picture;
 
 
     protected int getLayoutId() {
@@ -110,7 +111,6 @@ public abstract class BaseDemoActivity extends FragmentActivity implements OnMap
         }
         mMap = map;
         startDemo();
-
     }
 
 
@@ -130,6 +130,10 @@ public abstract class BaseDemoActivity extends FragmentActivity implements OnMap
 
     protected void setPropertyData(List<Properties_full> data) {
         this.propertyData = data;
+    }
+
+    protected  void setPicture(String picture){
+        this.picture=picture;
     }
 
 
@@ -154,11 +158,12 @@ public abstract class BaseDemoActivity extends FragmentActivity implements OnMap
 
     @Override
     public void onClusterItemInfoWindowClick(MyItem myItem) {
-        int id = myItem.getId();
+        //int id = myItem.getId();
         Intent intent = new Intent(getBaseContext(), FichaActivity.class);
         intent.putExtra("property_data", (Serializable)this.propertyData);
+        intent.putExtra("picture_data",this.picture);
         startActivity(intent);
-        //Toast.makeText(this,"windows"+id,Toast.LENGTH_LONG).show();
+
     }
 
     @Override

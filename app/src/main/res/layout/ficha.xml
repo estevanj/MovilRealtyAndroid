@@ -27,8 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@+id/titleDescription"
-        android:text="Titulo Aqui"
+        android:id="@+id/tvAddress"
+        android:text="Direccion"
         android:padding="@dimen/realty_padding">
     </TextView>
 

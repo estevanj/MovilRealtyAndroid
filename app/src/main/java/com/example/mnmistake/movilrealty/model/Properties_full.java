@@ -13,10 +13,10 @@ public class Properties_full implements Serializable {
     private final int sqFt;
     private final String acres;
     //////detalles
-    private final int id;
-    private final String location;
-    private final String type;
-    private final int year;
+    private final int d_id;
+    private final String d_location;
+    private final String d_type;
+    private final int d_year;
     ///School Information
     private final String elementary;
     private final String middle;
@@ -85,8 +85,8 @@ public class Properties_full implements Serializable {
     private final String a_OfficeName;
 
 
-    public Properties_full(String address, Double price, int bed, int bath, int sqFt, String acres, int id, String location, String type,
-                           int year, String elementary, String middle, String high, String i_status, String i_category, String i_proportytype,
+    public Properties_full(String address, Double price, int bed, int bath, int sqFt, String acres, int d_id, String d_location, String d_type,
+                           int d_year, String elementary, String middle, String high, String i_status, String i_category, String i_proportytype,
                            String i_subdivision, int i_totalLivingArea, int i_bedrooms, int i_fullBathroom, int i_halfBathrooms, int i_garage,
                            String i_newConst, String i_aproxAcres, int i_lotNumber, int i_yearBuilt, String i_directions, int s_totalLivingArea, int s_aboveGrade,
                            String d_kitchen, String d_garage, String d_livingRoom, String d_familyRoom, String d_patio, String d_masterBedroom, String d_bedroom2,
@@ -101,10 +101,10 @@ public class Properties_full implements Serializable {
         Bath = bath;
         this.sqFt = sqFt;
         this.acres = acres;
-        this.id = id;
-        this.location = location;
-        this.type = type;
-        this.year = year;
+        this.d_id = d_id;
+        this.d_location = d_location;
+        this.d_type = d_type;
+        this.d_year = d_year;
         this.elementary = elementary;
         this.middle = middle;
         this.high = high;
@@ -191,20 +191,22 @@ public class Properties_full implements Serializable {
     }
 
 
-    public int getId() {
-        return id;
+
+
+    public int getD_id() {
+        return d_id;
     }
 
-    public String getLocation() {
-        return location;
+    public String getD_location() {
+        return d_location;
     }
 
-    public String getType() {
-        return type;
+    public String getD_type() {
+        return d_type;
     }
 
-    public int getYear() {
-        return year;
+    public int getD_year() {
+        return d_year;
     }
 
     public String getElementary() {

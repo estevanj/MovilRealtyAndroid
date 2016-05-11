@@ -58,7 +58,7 @@
         android:layout_weight="3"
         android:id="@+id/descripcion"
         android:padding="@dimen/realty_padding"
-        android:text="asdnasdnasjkdnakjsdnajksdnaksdnasdnkasdnkajsndkaksdnkjasdjkasndjksankdasndkjansdkasdasdasdad">
+        android:text="asdnasdnasjkdnakjsdnajksdnaksdnasdnkasdjkasndjksankdasndkjansdkasdasdasdad">
     </TextView>
 
 
